@@ -1,5 +1,4 @@
 from sklearn.linear_model import LinearRegression
-import numpy as np
 import csv
 import os
 
@@ -20,6 +19,6 @@ for file in os.listdir('Testing Data'):
 predictor = LinearRegression(n_jobs=-1)
 predictor.fit(X=train_input, y=train_output)
 
-x_test = [[693, 784]] # Perfect prediction would yield .469, pythagorean expectation is .439
+x_test = [[693, 784]]  # Perfect prediction would yield .469, pythagorean expectation is .439
 outcome = predictor.predict(X=x_test)
 print(outcome)
